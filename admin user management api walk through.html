@@ -17,10 +17,10 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Get user token from header </br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Lookup user token in db </br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. If user token not found, call Okta to retrieve the user info. </br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. If user info not found or user info is not active: reject request. (user can contact EVO to resolve this in okta) </br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. If user info found and valid, Lookup user uuid in db. </br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f. If user found, then refresh user token and exp. Login user. </br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g. If user not found, then save user info into db. Login user. </br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. If user info not found or user info is not active: reject request. (user can contact EVO to resolve this in okta) </br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. If user info found and valid, Lookup user uuid in db. </br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f. If user found, then refresh user token and exp. Login user. </br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g. If user not found, then save user info into db. Login user. </br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h. If user token found but expired, reject request. ( user can request a new user token following on this ) </br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. Otherwise, login the user.
   </p>
